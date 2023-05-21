@@ -71,4 +71,53 @@ CPU 사용량
 |-m|프로세스들 뿐만 아니라 커널 스레드들도 보여준다.|
 
 >이 외에도 '-o, -p ,-r -u' 등등 여러 옵션이 있지만 분량상 제가 사용할 옵션을 정리해보았습니다.
-# 3. job
+# 3. jobs
+### jobs는 작업의 상태를 표시하는 명령어 입니다.
+>jobs 명령어는 현재 쉘 프로세스의 자식 백그라운드 프로세스들을 보여줍니다.
+
+``` bash
+(base) /home/chosun/20203154/gitdir/readme.md ~ % sleep 100 &
+[1] 8405
+(base) /home/chosun/20203154/gitdir/readme.md ~ % jobs
+[1]  + running    sleep 100
+```
++ 다음과 같이 sleep 명령어를 백그라운드 실행모드로 실행하고 이를 jobs로 확인할 수 있습니다.
+---
+# 3. jobs
+>jobs 명령어가 보여주는 상태에는 이러한 것들이 있습니다.
+
+
+|상태|설명|
+|:--:|:--:|
+|Running|작업이 계속 진행중|
+|Done|작업이 완료되어 0을 반환|
+|Done(code)|작업이 완료되어 코드를 반환|
+|Stopped|작업이 일시 중단|
+---
+# 4. kill
+### kill 은 프로세스를 종료할 때 사용하는 명령어입니다.
+``` bash
+(base) naujin@naujin-ui-MacBookPro ~ % sleep 100 &
+[1] 8461
+(base) naujin@naujin-ui-MacBookPro ~ % ps
+  PID TTY           TIME CMD
+ 8230 ttys000    0:00.09 -zsh
+ 8461 ttys000    0:00.00 sleep 100
+(base) naujin@naujin-ui-MacBookPro ~ % kill -9 8461
+[1]  + killed     sleep 100
+(base) naujin@naujin-ui-MacBookPro ~ % ps
+  PID TTY           TIME CMD
+ 8230 ttys000    0:00.10 -zsh
+```
+> sleep 명령어를 사용해 백그라운드 프로세스를 만들고 ps로 현재 진행중인 프로세스를 확인한 다음 kill 명령어의 옵션 -9를 사용해 프로세스를 직접 지정 종료해 보았습니다.
+---
+# 4. kill
+### -9
++ 프로세스 아이디를 직접 지정하여 종료할 수 있습니다.
+### -l
++ 신호로 사용할 수 있는 신호 이름들을 보여줍니다.
+---
+20203154 컴퓨터공학과 나우진
+
+
+
