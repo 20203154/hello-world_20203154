@@ -1,5 +1,7 @@
 
 
+![bg right 50%](https://github.com/20203154/hello-world_20203154/assets/133829839/cdac7352-30d5-461b-9905-d0c7fcc07136)
+
 # top, ps, jobs, kill에 대한 이해
 
 
@@ -12,19 +14,16 @@
 3. jobs
 4. kill
 ```
-***
+https://github.com/20203154/hello-world_20203154
+
+---
 
 # 1. top
 ### top 명령어는 table of processes 의 약자로 CPU 와 메모리 이용에 관한 정보를 표시하는 일을 수행합니다.
 ``` bash
 (base) /home/chosun/20203154/gitdir/readme.md ~ % top
 Processes: 448 total, 2 running, 446 sleeping, 2159 threads            23:44:33
-Load Avg: 1.26, 1.56, 1.62  CPU usage: 4.28% user, 3.56% sys, 92.15% idle
-SharedLibs: 397M resident, 79M data, 23M linkedit.
-MemRegions: 276565 total, 2423M resident, 238M private, 890M shared.
-PhysMem: 7328M used (1176M wired), 215M unused.
-VM: 191T vsize, 3268M framework vsize, 199287(0) swapins, 465072(0) swapouts.
-Networks: packets: 6769184/4186M in, 2333067/346M out.
+  ---생략---
 Disks: 1659506/39G read, 1139452/21G written.
 ID   COMMAND      %CPU TIME     #TH    #WQ  #PORT MEM    PURG   CMPRS  PGRP
 8260  top          4.8  00:03.92 1/1    0    44    4946K  0B     160K   8260
@@ -38,11 +37,15 @@ ID   COMMAND      %CPU TIME     #TH    #WQ  #PORT MEM    PURG   CMPRS  PGRP
 ### ID
 프로세스 ID
 >프로세스에 활당된 ID의 값을 표시합니다.
+####
 ### %CPU
 CPU 사용량 
 >전체 CPU 중 프로세스가 사용하고 있는 양 입니다.
+---
 ### TIME
 작업이 시작된 이후 사용한 총 CPU 시간
+#
+
 ### MEM
 메모리 사용량
 >프로세스가 사용하고 있는 메모리의 양 입니다.
@@ -113,12 +116,12 @@ CPU 사용량
 > sleep 명령어를 사용해 백그라운드 프로세스를 만들고 ps로 현재 진행중인 프로세스를 확인한 다음 kill 명령어의 옵션 -9를 사용해 프로세스를 직접 지정 종료해 보았습니다.
 ---
 # 4. kill
+# 
 ### -9
 + 프로세스 아이디를 직접 지정하여 종료할 수 있습니다.
+####
 ### -l
 + 신호로 사용할 수 있는 신호 이름들을 보여줍니다.
 ---
 20203154 컴퓨터공학과 나우진
-
-
 
